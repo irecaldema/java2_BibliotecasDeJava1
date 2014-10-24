@@ -11,8 +11,6 @@ public class Biblioteca_io {
         String file;
         char terminar='n';
 
-
-
         while (terminar!='s')
         {
         	
@@ -37,15 +35,9 @@ public class Biblioteca_io {
         System.out.print("para salir escriba s");
         System.out.println();
         
-
-        
         terminar = (char)System.in.read();
 
         }
-        	
     	System.out.println("Enorabuena!!"); 
-        
-
-        
     }
 }
