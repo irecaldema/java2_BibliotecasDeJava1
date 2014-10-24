@@ -4,10 +4,8 @@ public class Biblioteca_io {
     public static void main( String[] args )  throws IOException { 
 
         Scanner sc = new Scanner( System.in ); 
-        //FileReader reader = new FileReader();
 
         int contador=0;
-        //File archivo;
         String file;
         char terminar='n';
 
@@ -15,8 +13,6 @@ public class Biblioteca_io {
         {
         	
         System.out.print("elije un archivo de texto:");
-        //System.out.println(ls *.txt);
-        //ls *.txt;
         file = sc.next();
         //file = "prueba.txt";
 
