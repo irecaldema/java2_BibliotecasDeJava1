@@ -8,7 +8,7 @@ public class Biblioteca_io {
 
         int contador=0;
         //File archivo;
-        String archivo;
+        String file;
         char terminar='n';
 
 
@@ -19,26 +19,25 @@ public class Biblioteca_io {
         System.out.print("elije un archivo de texto:");
         //System.out.println(ls *.txt);
         //ls *.txt;
-        //archivo = sc.next();
-        archivo = "prueba.txt";
+        file = sc.next();
+        //file = "prueba.txt";
 
-        //System.out.print(reader(archivo));
-        //File file = new File(archivo);
-        //FileReader reader = new FileReader(file);
-        //reader.toString();
-        //System.out.println(reader);
-
-        FileReader reader = new FileReader("prueba.txt");
-
-        String texto = reader.toString();
-
-        System.out.println(texto);
-
+        System.out.println();
+        
+        //Creates a FileReader Object
+        FileReader fr = new FileReader(file); 
+        char [] a = new char[50];
+        fr.read(a); // reads the content to the array
+        for(char c : a)
+        System.out.print(c); //prints the characters one by one
+        fr.close();
 
         System.out.println();
 
         System.out.print("para salir escriba s");
         System.out.println();
+        
+
         
         terminar = (char)System.in.read();
 
