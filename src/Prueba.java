@@ -31,14 +31,20 @@ public class Prueba
             //1
             
             //2
-            BufferedReader br = new BufferedReader(fr); 
+            /*BufferedReader br = new BufferedReader(fr); 
             String s; 
             while((s = br.readLine()) != null) 
             { 
                 System.out.println(s);
-            }
+            }*/
             //2
             
+            
+            //3
+            char [] a = new char[50];
+            fr.read(a);
+            System.out.println(a);
+            //3
             fr.close();
     
             System.out.println();
