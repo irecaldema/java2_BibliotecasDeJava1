@@ -56,9 +56,30 @@ public class Multitarea
     
             System.out.println();
 				}
-			else if (opcion!='c')
+			else if (opcion=='c')
 				{
-					
+				        PrintWriter salida = null;
+					try 
+					{
+						salida = new PrintWriter("ejemplo.txt");
+						String cadena;
+						System.out.println("Introduce texto. Para acabar introduce la cadena FIN:");
+						cadena = sc.nextLine();
+						while (!cadena.equalsIgnoreCase("FIN")) 
+						{
+							salida.println(cadena);
+							cadena = sc.nextLine();
+						}
+						salida.flush();
+					} 
+					catch (FileNotFoundException e) 
+					{
+						System.out.println(e.getMessage());
+					} 
+					finally 
+					{
+						salida.close();
+					}	
 				}
 			else
 				{
@@ -90,13 +111,17 @@ public class Multitarea
             opcion = (char)System.in.read();
 
         } 
+		//random
+		Random r = new Random();
+		int suerte=0;
+		suerte=r.nextInt(54);
+		System.out.println();
+		System.out.println("Enorabuena!!");
+		System.out.println("Tu numero de la suerte ahora cambio a: " + suerte);
 		//date
 		Date gaur = new Date();
-		System.out.println("Enorabuena!!");
-		System.out.println(gaur);
-		//random
-		Random r = new Random(24);
-		System.out.println("Tu hora de la suerte es: " + r);
+		System.out.println();
+		System.out.println("fecha:  "+gaur);
 		
     }
 }
