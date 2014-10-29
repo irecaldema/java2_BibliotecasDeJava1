@@ -12,7 +12,7 @@ public class Multitarea
         char opcion='n';
 		
 		
-		System.out.print("crear archivo (c), leer archivo (l), salir (s)");
+	System.out.print("crear archivo (c), leer archivo (l), salir (s)");
         System.out.println();
             
         opcion = (char)System.in.read();
