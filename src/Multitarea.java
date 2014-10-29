@@ -8,6 +8,7 @@ public class Multitarea
         Scanner sc = new Scanner( System.in ); 
 
         int contador=0;
+	int tempo = 0;
         String file;
         char opcion='n';
 		
@@ -40,17 +41,19 @@ public class Multitarea
             //1
             
             //2  BufferedReader
-            /*BufferedReader br = new BufferedReader(fr); 
+            BufferedReader br = new BufferedReader(fr); 
             String s; 
             while((s = br.readLine()) != null) 
             { 
                 System.out.println(s);
-            }*/
+            }
             //2                     
             //3
+		/*	
             char [] a = new char[50];
             fr.read(a);
             System.out.println(a);
+		*/
             //3
             fr.close();
     
@@ -87,22 +90,28 @@ public class Multitarea
 				//timer  http://docs.oracle.com/javase/7/docs/api/javax/swing/Timer.html
 				Timer timer;
 				timer = new Timer();
-
 				TimerTask task = new TimerTask() {
-					int tic=0;
-
 					@Override
 					public void run()
-					{
-						if (tic%2==0)
+					{		
+						Random x = new Random();
+						int x1 =x.nextInt(2);
+						if (x1%2==0)
 							System.out.println("TIC");
 						else
 							System.out.println("TOC");
-						tic++;
+						tempo++;
+						System.out.println(tempo);
+						if (tempo>=10)
+						{
+							timer.cancel();
+							timer.purge();
+						}
 					}
 				};
 				// Empezamos dentro de 10ms y luego lanzamos la tarea cada 1000ms
 				timer.schedule(task, 10, 1000);
+				
 				}
 					
             System.out.print("crear archivo (c), leer archivo (l), salir (s)");
