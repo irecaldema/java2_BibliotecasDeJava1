@@ -60,14 +60,14 @@ public class Multitarea
 				}
 			else if (opcion=='c')
 				{
-				        PrintWriter salida = null;
+					//printwriter
+				        PrintWriter escritor = null;
 					try 
-					{
-						//printwriter
-						String nobrazo, cadena;
+					{						
+						String nombrazo, cadena;
 						System.out.println("Introduce nombre archivo de texto");
-						nobrazo = sc.nextLine();
-						nobrazo=nobrazo+".txt";
+						nombrazo = sc.nextLine();
+						nombrazo=nombrazo+".txt";
 						//escritor = new PrintWriter("ejemplo.txt");
 						escritor = new PrintWriter(nombrazo);
 						System.out.println("Introduce texto. Para acabar introduce la cadena FIN:");
@@ -77,7 +77,7 @@ public class Multitarea
 							escritor.println(cadena);
 							cadena = sc.nextLine();
 						}
-						salida.flush();
+						escritor.flush();
 					} 
 					catch (FileNotFoundException e) 
 					{
@@ -85,7 +85,7 @@ public class Multitarea
 					} 
 					finally 
 					{
-						salida.close();
+						escritor.close();
 					}	
 				}
 			else
