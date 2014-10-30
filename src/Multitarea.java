@@ -92,6 +92,7 @@ public class Multitarea
 				{
 				System.out.println("tiempo para pensar");
 				//timer  http://docs.oracle.com/javase/7/docs/api/javax/swing/Timer.html
+				
 				Timer timer;
 				timer = new Timer();
 				TimerTask task = new TimerTask() {
@@ -99,28 +100,26 @@ public class Multitarea
 					public void run()
 					{
 						Random x = new Random();
+						int tempo=x.nextInt(110);
+						if (tempo>=100) 
+						{
+							timer.cancel();
+							timer.purge();
+							System.out.println("control + c");
+							return;
+						}
 						int x1 =x.nextInt(2);
 						if (x1%2==0)
 							System.out.println("TIC");
 						else
 							System.out.println("TOC");
-						/*tempo=x.nextInt(110);
-						if (tempo>=100) 
-						{
-							timer.cancel();
-							timer.purge();
-							return;
-						}*/
 					}
 				};
 				// Empezamos dentro de 10ms y luego lanzamos la tarea cada 1000ms
-				timer.schedule(task, 10, 1000);
-				
+				timer.schedule(task, 10, 1000);	
 				}
 					
-            System.out.print("crear archivo (c), leer archivo (l), salir (s)");
-            System.out.println();
-            
+            System.out.println("crear archivo (c), leer archivo (l), salir (s)");
             opcion = (char)System.in.read();
 
         } 
