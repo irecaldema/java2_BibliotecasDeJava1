@@ -66,7 +66,8 @@ public class Multitarea
 					{						
 						String nombrazo, cadena;
 						System.out.println("Introduce nombre archivo de texto");
-						nombrazo = sc.nextLine();
+						System.out.println();
+						nombrazo = sc.next();
 						nombrazo=nombrazo+".txt";
 						//escritor = new PrintWriter("ejemplo.txt");
 						escritor = new PrintWriter(nombrazo);
@@ -104,7 +105,7 @@ public class Multitarea
 							System.out.println("TIC");
 						else
 							System.out.println("TOC");
-						/*tempo=x.nextInt(125);
+						/*tempo=x.nextInt(110);
 						if (tempo>=100) 
 						{
 							timer.cancel();
