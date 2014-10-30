@@ -8,7 +8,6 @@ public class Multitarea
         Scanner sc = new Scanner( System.in ); 
 
         int contador=0;
-	int tempo = 0;
         String file;
         char opcion='n';
 		
@@ -93,20 +92,20 @@ public class Multitarea
 				TimerTask task = new TimerTask() {
 					@Override
 					public void run()
-					{		
+					{
 						Random x = new Random();
 						int x1 =x.nextInt(2);
 						if (x1%2==0)
 							System.out.println("TIC");
 						else
 							System.out.println("TOC");
-						tempo++;
-						System.out.println(tempo);
-						if (tempo>=10)
+						/*tempo=x.nextInt(125);
+						if (tempo>=100) 
 						{
 							timer.cancel();
 							timer.purge();
-						}
+							return;
+						}*/
 					}
 				};
 				// Empezamos dentro de 10ms y luego lanzamos la tarea cada 1000ms
