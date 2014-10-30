@@ -63,13 +63,18 @@ public class Multitarea
 				        PrintWriter salida = null;
 					try 
 					{
-						salida = new PrintWriter("ejemplo.txt");
-						String cadena;
+						//printwriter
+						String nobrazo, cadena;
+						System.out.println("Introduce nombre archivo de texto");
+						nobrazo = sc.nextLine();
+						nobrazo=nobrazo+".txt";
+						//escritor = new PrintWriter("ejemplo.txt");
+						escritor = new PrintWriter(nombrazo);
 						System.out.println("Introduce texto. Para acabar introduce la cadena FIN:");
 						cadena = sc.nextLine();
 						while (!cadena.equalsIgnoreCase("FIN")) 
 						{
-							salida.println(cadena);
+							escritor.println(cadena);
 							cadena = sc.nextLine();
 						}
 						salida.flush();
