@@ -66,7 +66,6 @@ public class Multitarea
 					{						
 						String nombrazo, cadena;
 						System.out.println("Introduce nombre archivo de texto");
-						System.out.println();
 						nombrazo = sc.next();
 						nombrazo=nombrazo+".txt";
 						//escritor = new PrintWriter("ejemplo.txt");
