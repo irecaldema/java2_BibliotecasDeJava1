@@ -123,13 +123,17 @@ public class Multitarea
             opcion = (char)System.in.read();
 
         } 
+		System.out.println();
+		System.out.println("Enorabuena!!");
 		//random
 		Random r = new Random();
 		int suerte=0;
-		suerte=r.nextInt(54);
-		System.out.println();
-		System.out.println("Enorabuena!!");
-		System.out.println("Tu numero de la suerte ahora cambio a: " + suerte);
+		suerte=r.nextInt(10);
+		//arrays
+		int[] numeros = {1, 3, 5, 7, 9, 0, 2, 4, 6, 8};
+		//System.out.println(suerte); //si es 0 saldra 1 etc. 
+		int suerte2=numeros[suerte];
+		System.out.println("Tu numero de la suerte ahora cambio a: " + suerte2);
 		//date
 		Date gaur = new Date();
 		System.out.println();
