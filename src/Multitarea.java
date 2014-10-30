@@ -22,7 +22,7 @@ public class Multitarea
         {
         if (opcion=='l')
 				{
-            System.out.print("elije un archivo de texto:");
+            System.out.print("elije un archivo de texto: ejemplo.txt");
             file = sc.next();
             //file = "prueba.txt";
     
